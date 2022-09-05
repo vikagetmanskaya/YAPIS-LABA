@@ -1,0 +1,14 @@
+int i
+int a = i//0
+float b = cast a to float
+float c = cast to float a + 1 //cast has lower priority
+bool d = c > b
+bool e = scan(bool)
+string f = "why"
+row g = [i a b c d e f]
+table h = {g g}
+
+main begin
+	print(e)
+	print(h)
+end

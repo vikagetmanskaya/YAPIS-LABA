@@ -1,0 +1,12 @@
+fn convertion() begin
+	int a
+	float b = cast to float a
+	a = cast to int b
+	string c = "_" + cast a to string + "_"
+	int k = cast to int "_" + cast a to string - "_"
+	print(k)
+end
+
+main begin
+	convertion()
+end

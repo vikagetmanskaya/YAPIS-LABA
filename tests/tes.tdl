@@ -1,0 +1,14 @@
+fn function() begin
+	table Table
+	Table = {["henlo"]}
+	print(Table[0])
+end
+
+fn k(row d) begin
+	print(d)
+end
+
+main begin
+	function()
+	k([scan(column) scan(column)])
+end

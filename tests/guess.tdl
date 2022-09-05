@@ -1,0 +1,24 @@
+
+fn guess() returns bool begin
+	print("guess number ")
+	string command = scan(string)
+	if command == "stop" begin
+		print("ha, you gave up! I won!\n")
+		return true
+	end
+	int guess = cast to int command
+	if guess > 42 begin
+		print("haha too far away, try lower\n")
+	end
+	else if guess < 42 begin
+		print("not even close, try higher\n")
+	end
+	else begin
+		print("not fair you cheated!\n")
+	end
+	return false
+end
+
+main begin
+	until guess() begin end	
+end

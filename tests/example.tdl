@@ -1,0 +1,32 @@
+int global
+int global2 = global
+
+fn get42() returns int begin
+	print("print an integer ")
+	column c = scan(column)
+	if cast c to int == 0 begin
+		return get42() + 1
+	end
+	global = global + 1
+	print("global = ", global, " ", global2, "\n")
+	return 0
+end
+
+main begin
+	table TableName = {
+		["name" "id" "score"]
+		["Kaleb" 0 0]
+		["Nick" 1 1]
+		["Bach" 2 -42]
+	}
+	int global2 = 2 + 2 * 2
+	print("global = ", global, " ", global2, "\n")
+	row Row = ["some" 42 "row"]
+	for row entry in TableName begin
+		print("name ", entry[0], "\n")
+	end
+	print(TableName)
+	int attempts = get42()
+	print("printed a non0 integer after ", attempts, " attempts\n")
+	print("global = ", global, "\n")
+end
